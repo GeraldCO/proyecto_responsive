@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invie - tus mejores guitarras</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/invie.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+</head>
+<body class="precios">
+	
+ <!-- portada -->
+ <div class="background">
+	<header id="header" class="header contenedor" > <!-- header -->
+		<figure class="logotipo">  <!-- logotipo -->
+			<img src="img/invie.png" height="60" width="186" alt="logo invie">
+		</figure>
+		<span class="burguer-button icon-menu" id="burguer-button" ></span>
+		<nav class="menu" id="menu"> <!-- menu -->
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="precios.html">Precios</a>
+				</li>
+				<li>
+					<a href="index.html#guitarras">Guitarras</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+</div>	
+
+<section class="tabla">
+	<div class="contenedor">
+		<table>
+		<thead>
+			<th>Modelo</th>
+			<th>Precio</th>
+			<th>Descripcón</th>
+			<th>Modelo</th>
+			<th>Precio</th>
+			<th>Descripcón</th>
+			<th>Modelo</th>
+			<th>Precio</th>
+			<th>Descripcón</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+			</tr>
+			<tr>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+			</tr>
+			<tr>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+				<td>Invie classic</td>
+				<td>$10000</td>
+				<td>guitarras increibles </td>
+			</tr>
+			
+		</tbody>
+	</table>
+	</div>
+</section>
+
+
+
+
+<footer class="footer">
+
+<div class="contenedor">
+
+	<div class="contacto">
+		<img src="img/invie-white.png" alt="logotipo blanco">
+		<a href="tel:+50587034545"><strong>Telefono</strong> <span> +505 87034545</span></a>
+		<a href="mailto:info@kodedesign.net"><strong>E-mail</strong> <span> info@kodedesign.nets</span></a>
+	</div>
+	<form class="formulario">
+		<div class="col1">
+				<label for="nombre"> Nombre</label>
+				<input type="text" name="nombre" id="nombre" required placeholder="Escribe tu correo">
+				<label for="email">E-mail</label>
+				<input type="email" name="email" required placeholder="Escribe tu correo">
+			
+			<div class="sexo"> 
+				<label for="mujer"> 
+					<input type="radio" id="mujer" checked name="sexo" value="mujer"> Mujer
+				</label>
+				<label>
+					<input type="radio" name="sexo" id="hombre" value="hombre"> Hombre
+				</label>
+			</div>
+			<div class="intereses">
+				<label for="cotizacion"> 
+					<input type="checkbox" checked id="cotizacion" value="cotizacion" name="intereses">Cotizacion
+				</label>
+				<label for="comentarios"> 
+					<input type="checkbox" id="comentarios" value="comentarios" name="intereses">Comentarios
+				</label>
+				<label for="reclamos"> 
+					<input type="checkbox" id="reclamos" value="reclamos" name="intereses">Reclamos
+				</label>
+				<label for="otros">
+					<input type="checkbox" id="otros" value="otros" name="intereses"> Otros
+				</label>
+			</div>
+		</div>
+		<div class="col2">
+			<label for="comentarios">Comentarios	</label>
+			<textarea name="comentarios" id="comentarios" cols="18" rows="7"></textarea>
+			<input type="submit" name="enviar" class="button" value="Enviar">
+		</div>
+	</form>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+<script>
+	var consulta = window.matchMedia('(max-width: 500px');
+	consulta.addListener(mediaQuery);
+
+	var $burguerButton = document.getElementById('burguer-button');
+	var $menu = document.getElementById('menu');
+	function toggleMenu(){
+		$menu.classList.toggle('active');
+	}
+
+	function mediaQuery(){
+		if (consulta.matches){
+			console.log('se cumplio la regla');
+			
+			$burguerButton.addEventListener("touchstart", toggleMenu);
+		} else {
+			console.log('no se cumplio la regla');
+			$burguerButton.removeEventListener("touchstart", toggleMenu)
+		}
+	}
+
+	mediaQuery();
+
+	var bLazy = new Blazy({
+    selector: 'img'
+});
+</script>
+</body>
+</html>
