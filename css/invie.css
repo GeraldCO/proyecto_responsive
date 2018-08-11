@@ -271,7 +271,7 @@ body {
 	
 }
 div.contacto{
-	    height: 141px;
+		height: 141px;
 }
 
 .formulario{
@@ -426,6 +426,11 @@ div.contacto{
 
 	.contacto{
 		margin: 0 auto;
+		display: block;
+	}
+
+	.contacto a {
+		display: block;
 	}
 	.formulario{
 		display: block;
@@ -436,6 +441,9 @@ div.contacto{
 		display: block;
 		font-size: 16px;
 	}
+	input [type="text"]{
+		margin-bottom: 30px;
+	}
 	input [type="text"],
 	input [type="email"]{
 		font-size: 16px;
@@ -445,6 +453,11 @@ div.contacto{
 	input [type="checkbox"],
 	input [type="radio"]{
 		zoom: 1.5;
+	}
+
+	.sexo label{
+		display: block;
+		font-size: 20px;
 	}
 
 	textarea {
